@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'Helvetica Light';
+    src: url('../fonts/helvetica_light.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+  font-family: 'HelveticaNeue Light';
+  src: url('../fonts/HelveticaNeue-Light.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HelveticaNeue Black';
+  src: url('../fonts/HelveticaNeue-Black.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HelveticaNeue Medium';
+  src: url('../fonts/HelveticaNeue-Medium.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HelveticaNeue Regular';
+  src: url('../fonts/HelveticaNeue-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HelveticaNeue Thin';
+  src: url('../fonts/HelveticaNeue-Thin.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HelveticaNeue Bold';
+  src: url('../fonts/HelveticaNeueBd.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HelveticaNeue Heavy';
+  src: url('../fonts/HelveticaNeueHv.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HelveticaNeue Medium';
+  src: url('../fonts/HelveticaNeueMed.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
