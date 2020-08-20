@@ -27,26 +27,7 @@
                                         <div class="card_head"><span class="icon-photo"></span>PHOTOS </div>
                                     </div>
                                     <div class="card-body">
-                                        <div class="swiper-container gallery-top">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide">swiper0</div>
-                                                <div class="swiper-slide">swiper1</div>
-                                                <div class="swiper-slide">swiper2</div>
-                                                <div class="swiper-slide">swiper3</div>
-                                                <div class="swiper-slide">swiper4</div>
-                                            </div>
-                                            <div class="swiper-button-next swiper-button-white">next</div>
-                                            <div class="swiper-button-prev swiper-button-white">Previous</div>
-                                        </div>
-                                        <div class="swiper-container gallery-thumbs">
-                                            <div class="swiper-wrapper">
-                                              <div class="swiper-slide">swiper0</div>
-                                              <div class="swiper-slide">swiper1</div>
-                                              <div class="swiper-slide">swiper2</div>
-                                              <div class="swiper-slide">swiper3</div>
-                                              <div class="swiper-slide">swiper4</div>
-                                            </div>
-                                          </div>
+                                        <ng-image-slider [images]="imageObject" #nav></ng-image-slider>
                                     </div>
                                 </div>
                             </div>

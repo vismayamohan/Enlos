@@ -9,25 +9,30 @@
                                 <p class="log-in">Log In</p>
                                 <p class="login-desc">Login to access dewabit web</p>
                             </div>
-                            <div class="login-user-details">
-                                <mat-form-field appearance="outline" class="user-input">
-                                    <mat-label>E-mail</mat-label>
-                                    <input matInput placeholder="E-mail" required>
-                                </mat-form-field>
-                            </div>
-                            <div class="login-user-details">
-                                <mat-form-field appearance="outline" class="user-input">
-                                    <mat-label>Password</mat-label>
-                                    <input matInput placeholder="Password" required>
-                                </mat-form-field>
-                            </div>
-                            <div class="forgot">
-                                <a href="javascript:void(0)">Forgot Password?</a>
-                            </div>
-                            <div class="clear"></div>
-                            <div class="login-bttn">
-                                <button class="login_bttn"><span class="icon-login"></span>LOG IN</button>
-                            </div>
+                            <form [formGroup]="signin" (ngSubmit)="onSubmit()">
+                                <div class="login-user-details">
+                                    <mat-form-field appearance="outline" class="user-input">
+                                        <mat-label>E-mail</mat-label>
+                                        <input matInput placeholder="E-mail" formControlName="email" required>
+                                        <mat-error *ngIf="!emailInput.value">Enter your Email</mat-error>
+                                    </mat-form-field>
+                                </div>
+                                <div class="login-user-details">
+                                    <mat-form-field appearance="outline" class="user-input">
+                                        <mat-label>Password</mat-label>
+                                        <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'" formControlName="password" required>
+                                        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                        <mat-error *ngIf="!passwordInput.value">Enter your password</mat-error>
+                                    </mat-form-field>
+                                </div>
+                                <div class="forgot">
+                                    <a href="javascript:void(0)">Forgot Password?</a>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="login-bttn">
+                                    <button class="login_bttn" routerLink="/dashboard" [disabled]="!signin.valid"><span class="icon-login"></span>LOG IN</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

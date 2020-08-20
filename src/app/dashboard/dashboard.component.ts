@@ -16,9 +16,9 @@ export class DashboardComponent implements OnInit {
   isOrders: boolean = false;
   isNews: boolean = false;
   addClass: string = 'contentBottom';
-  itemsAdd: string = '';
-  ordersAdd: string = '';
-  newsAdded: string = '';
+  itemsAdd: string = 'contentBottom';
+  ordersAdd: string = 'contentBottom';
+  newsAdded: string = 'contentBottom';
 
   // status: boolean = false;
   constructor(
