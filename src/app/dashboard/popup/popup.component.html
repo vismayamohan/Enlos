@@ -27,7 +27,9 @@
                                         <div class="card_head"><span class="icon-photo"></span>PHOTOS </div>
                                     </div>
                                     <div class="card-body">
-                                        <ng-image-slider [images]="imageObject" #nav></ng-image-slider>
+                                        <!-- <ng-image-slider [images]="imageObject" #nav></ng-image-slider> -->
+                                        <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+
                                     </div>
                                 </div>
                             </div>

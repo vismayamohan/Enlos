@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
-import { Swiper } from 'swiper';
-import { NgImageSliderModule } from 'ng-image-slider'
+import { NgxGalleryOptions, NgxGalleryImage, NgxGalleryAnimation } from 'ngx-gallery-9';
+
 
 @Component({
   selector: 'app-popup',
@@ -13,45 +13,61 @@ export class PopupComponent implements OnInit {
     private Dialog: MatDialog
   ) { }
 
-  imageObject: Array<object> = [{
-    image: '/assets/images/placeholder.com-logo1.jpg',
-    thumbImage: '/assets/images/placeholder.com-logo1.jpg',
-    alt: 'alt of image',
-    title: 'title of image'
-  }, {
-    image: 'https://i.picsum.photos/id/838/1020/600.jpg',
-    thumbImage: 'https://i.picsum.photos/id/838/400/350.jpg',
-    title: 'Image title',
-    alt: 'Image alt'
-  }, {
-    image: 'https://i.picsum.photos/id/93/1020/600.jpg',
-    thumbImage: 'https://i.picsum.photos/id/93/400/350.jpg',
-    title: 'Image title',
-    alt: 'Image alt'
-  }, {
-    image: 'https://i.picsum.photos/id/543/1020/600.jpg',
-    thumbImage: 'https://i.picsum.photos/id/543/400/350.jpg',
-    title: 'Image title',
-    alt: 'Image alt'
-  }, {
-    image: 'https://i.picsum.photos/id/613/1020/600.jpg',
-    thumbImage: 'https://i.picsum.photos/id/613/400/350.jpg',
-    title: 'Image title',
-    alt: 'Image alt'
-  }, {
-    image: 'https://i.picsum.photos/id/609/1020/600.jpg',
-    thumbImage: 'https://i.picsum.photos/id/609/400/350.jpg',
-    title: 'Image title',
-    alt: 'Image alt'
-  }, {
-    image: 'https://i.picsum.photos/id/717/1020/600.jpg',
-    thumbImage: 'https://i.picsum.photos/id/717/400/350.jpg',
-    title: 'Image title',
-    alt: 'Image alt'
-  }
+  galleryOptions: NgxGalleryOptions[];
+  galleryImages: NgxGalleryImage[];
+
+  ngOnInit() { 
+
+    this.galleryOptions = [
+      {
+          width: '100%',
+          height: '250px',
+          thumbnailsColumns: 4,
+          imageAnimation: NgxGalleryAnimation.Slide
+      },
+      // max-width 800
+      {
+          breakpoint: 800,
+          width: '100%',
+          height: '250px',
+          imagePercent: 80,
+          thumbnailsPercent: 20,
+          thumbnailsMargin: 20,
+          thumbnailMargin: 20
+      },
+      // max-width 400
+      {
+          breakpoint: 600,
+          width: '100%',
+          height: '200px',
+          preview: false
+      }
   ];
 
-  ngOnInit() { }
+  this.galleryImages = [
+    {
+      small: 'assets/images/photo4.jpg',
+      medium: 'assets/images/photo4.jpg',
+      big: 'assets/images/photo4.jpg'
+    },
+    {
+        small: 'assets/images/juice1.jpg',
+        medium: 'assets/images/juice1.jpg',
+        big: 'assets/images/juice1.jpg'
+    },
+    {
+        small: 'assets/images/juice2.jpg',
+        medium: 'assets/images/juice2.jpg',
+        big: 'assets/images/juice2.jpg'
+    },
+    {
+      small: 'assets/images/juice3.jpeg',
+      medium: 'assets/images/juice3.jpeg',
+      big: 'assets/images/juice3.jpeg'
+    },
+      
+  ];
+}
 
   closeDialog() {
     this.Dialog.closeAll();

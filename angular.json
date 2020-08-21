@@ -29,7 +29,8 @@
               "src/assets/css/main.scss",
               "src/assets/css/fonts.css",
               "src/assets/css/font-icon.css",
-              "src/styles.css"
+              "src/styles.css",
+              "./node_modules/font-awesome/css/font-awesome.css"
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.min.js"
