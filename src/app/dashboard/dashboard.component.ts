@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { PopupComponent } from './popup/popup.component';
 
+import { NgxGalleryOptions, NgxGalleryImage, NgxGalleryAnimation } from 'ngx-gallery-9';
+import { WindowState } from '@progress/kendo-angular-dialog';
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -25,8 +28,6 @@ export class DashboardComponent implements OnInit {
     private Dialog: MatDialog
   ) { }
 
-  ngOnInit(): void {
-  }
 
   isOpenMenu() {
     this.isOpen = !this.isOpen;
@@ -41,44 +42,112 @@ export class DashboardComponent implements OnInit {
     if(option=="dashboard") {
       this.isDroupout = !this.isDroupout;
       if(this.isDroupout) {
-        this.addClass = 'contentBottom';
-      } else {
         this.addClass = '';
+      } else {
+        this.addClass = 'contentBottom';
       }
     }
     if(option=="items") {
       this.isItems = !this.isItems;
       if(this.isItems) {
-        this.itemsAdd = 'contentBottom';
-      } else {
         this.itemsAdd = '';
+      } else {
+        this.itemsAdd = 'contentBottom';
       }
     }
     if(option=="orders") {
       this.isOrders = !this.isOrders;
       if(this.isOrders) {
-        this.ordersAdd = 'contentBottom';
-      } else {
         this.ordersAdd = '';
+      } else {
+        this.ordersAdd = 'contentBottom';
       }
     }
     if(option=="newsAdd") {
       this.isNews = !this.isNews; 
       if(this.isNews) {
-        this.newsAdded = 'contentBottom'
-      } else {
         this.newsAdded= '';
+      } else {
+        this.newsAdded = 'contentBottom'
       }
     }
   }
 
-  openDialog() {
-    const dialogConfig = new MatDialogConfig()
-    this.Dialog.open(PopupComponent, {
-      width: '1000px',
-      height: '600px',
-      disableClose: true
-    });
+  // openDialog() {
+  //   const dialogConfig = new MatDialogConfig()
+  //   this.Dialog.open(PopupComponent, {
+  //     width: '1000px',
+  //     height: '600px',
+  //     disableClose: true
+  //   });
+  // }
+
+  public windowState: WindowState = 'default';
+    public opened: boolean = false;
+
+    public openClose(isOpened: boolean) {
+      this.opened = isOpened;
+    }
+
+
+  galleryOptions: NgxGalleryOptions[];
+  galleryImages: NgxGalleryImage[];
+
+  ngOnInit() { 
+
+    this.galleryOptions = [
+      {
+          width: '100%',
+          height: '250px',
+          thumbnailsColumns: 4,
+          imageAnimation: NgxGalleryAnimation.Slide
+      },
+      // max-width 800
+      {
+          breakpoint: 800,
+          width: '100%',
+          height: '250px',
+          imagePercent: 80,
+          thumbnailsPercent: 20,
+          thumbnailsMargin: 20,
+          thumbnailMargin: 20
+      },
+      // max-width 400
+      {
+          breakpoint: 600,
+          width: '100%',
+          height: '200px',
+          preview: false
+      }
+    ];
+
+    this.galleryImages = [
+      {
+        small: 'assets/images/photo4.jpg',
+        medium: 'assets/images/photo4.jpg',
+        big: 'assets/images/photo4.jpg'
+      },
+      {
+          small: 'assets/images/juice1.jpg',
+          medium: 'assets/images/juice1.jpg',
+          big: 'assets/images/juice1.jpg'
+      },
+      {
+          small: 'assets/images/juice2.jpg',
+          medium: 'assets/images/juice2.jpg',
+          big: 'assets/images/juice2.jpg'
+      },
+      {
+        small: 'assets/images/juice3.jpeg',
+        medium: 'assets/images/juice3.jpeg',
+        big: 'assets/images/juice3.jpeg'
+      },
+        
+    ];
+  }
+
+  closeDialog() {
+    this.Dialog.closeAll();
   }
 
 }

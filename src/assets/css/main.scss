@@ -13,7 +13,7 @@ header .main-header {
   padding: 0 40px;
 }
 header .navbar {
-  padding: 15px 0;
+  padding: 25px 0;
 }
 .navbar-expand-lg .navbar-collapse {
   justify-content: flex-end;
@@ -365,6 +365,120 @@ header .navbar {
 .login-user-details {
   padding-bottom: 10px;
 }
+.active-article button:focus {
+  outline: none;
+}
+
+// POPUP
+// .active-article kendo-window {
+//   top: inherit!important;
+//   left: inherit!important;
+// }
+.active-article kendo-window {
+  box-shadow: 0 11px 15px -7px rgba(0,0,0,.2), 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12);
+  border-radius: 5px;
+}
+.active-article .k-button {
+  background: transparent;
+  border: none;
+}
+.active-article .k-window-minimized {
+  bottom: 0;
+  top: inherit!important;
+  left: inherit!important;
+  right: 0;
+  height: inherit!important;
+}
+.active-article .k-window {
+  min-height: inherit!important;
+  height: 600px;
+  max-width: 1000px;
+  overflow-y: scroll;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  left: 50%!important;
+  top: 50%!important;
+  width: 100%;
+  position: fixed!important;
+}
+.active-article .k-window.k-window-maximized {
+  width: 100%!important;
+  max-width: 100%!important;
+}
+.active-article .k-window:focus {
+  outline: none;
+}
+kendo-window-titlebar.k-window-titlebar.k-dialog-titlebar {
+  display: flex;
+  justify-content: space-between;
+  background: #006ea3;
+  padding: 5px 10px;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+}
+.active-article .k-content {
+  margin-top: 35px;
+}
+.k-window-title:before {
+  font-family: FontAwesome;
+  content: "\f002";
+  display: inline-block;
+  padding-right: 3px;
+  vertical-align: middle;
+  font-weight: 900;
+  margin-right: 5px;
+}
+.k-i-window-minimize:before {
+  font-family: FontAwesome;
+  content: "\f068";
+  display: inline-block;
+  padding-right: 3px;
+  vertical-align: middle;
+  font-weight: 900;
+  margin-right: 5px;
+}
+.k-i-window-maximize:before {
+  font-family: FontAwesome;
+  content: "\f2d0";
+  display: inline-block;
+  padding-right: 3px;
+  vertical-align: middle;
+  font-weight: 900;
+  margin-right: 5px;
+}
+.k-i-close:before {
+  font-family: FontAwesome;
+  content: "\f00d";
+  display: inline-block;
+  padding-right: 3px;
+  vertical-align: middle;
+  font-weight: 900;
+  margin-right: 5px;
+}
+.k-i-window-restore:before {
+  font-family: FontAwesome;
+  content: "\f2d2";
+  display: inline-block;
+  padding-right: 3px;
+  vertical-align: middle;
+  font-weight: 900;
+  margin-right: 5px;
+}
+button.k-button-icon.k-button.k-bare {
+  color: #fff;
+}
+.popup-body {
+  background: #fff;
+}
+.logo-details span {
+  font-size: 25px;
+  color: #000;
+  margin: 0;
+}
+.logo-details:hover {
+  text-decoration: none;
+}
 // RESPONSIVE
 
 @media(max-width: 900px) {
@@ -427,5 +541,14 @@ header .navbar {
   }
   .details-main {
     display: block;
+  }
+  .active-article kendo-window {
+    left: 0!important;
+    top: 0!important;
+  }
+}
+@media(max-width: 767px) {
+  .active-article .k-content {
+    margin-top: 80px;
   }
 }

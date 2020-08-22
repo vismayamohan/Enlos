@@ -3,6 +3,6 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; font-size: 15px; }
 
-.mat-sidenav-container, .mat-sidenav-content, .mat-tab-body-content {
+/* .mat-sidenav-container, .mat-sidenav-content, .mat-tab-body-content {
     transform: none !important;
-}
+} */

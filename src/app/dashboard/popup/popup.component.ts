@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { NgxGalleryOptions, NgxGalleryImage, NgxGalleryAnimation } from 'ngx-gallery-9';
+import { WindowState } from '@progress/kendo-angular-dialog';
 
 
 @Component({
@@ -9,6 +10,13 @@ import { NgxGalleryOptions, NgxGalleryImage, NgxGalleryAnimation } from 'ngx-gal
   styleUrls: ['./popup.component.css']
 })
 export class PopupComponent implements OnInit {
+
+  public windowState: WindowState = 'default';
+    public opened: boolean = true;
+
+    public openClose(isOpened: boolean) {
+      this.opened = isOpened;
+    }
   constructor(
     private Dialog: MatDialog
   ) { }
@@ -42,32 +50,32 @@ export class PopupComponent implements OnInit {
           height: '200px',
           preview: false
       }
-  ];
+    ];
 
-  this.galleryImages = [
-    {
-      small: 'assets/images/photo4.jpg',
-      medium: 'assets/images/photo4.jpg',
-      big: 'assets/images/photo4.jpg'
-    },
-    {
-        small: 'assets/images/juice1.jpg',
-        medium: 'assets/images/juice1.jpg',
-        big: 'assets/images/juice1.jpg'
-    },
-    {
-        small: 'assets/images/juice2.jpg',
-        medium: 'assets/images/juice2.jpg',
-        big: 'assets/images/juice2.jpg'
-    },
-    {
-      small: 'assets/images/juice3.jpeg',
-      medium: 'assets/images/juice3.jpeg',
-      big: 'assets/images/juice3.jpeg'
-    },
-      
-  ];
-}
+    this.galleryImages = [
+      {
+        small: 'assets/images/photo4.jpg',
+        medium: 'assets/images/photo4.jpg',
+        big: 'assets/images/photo4.jpg'
+      },
+      {
+          small: 'assets/images/juice1.jpg',
+          medium: 'assets/images/juice1.jpg',
+          big: 'assets/images/juice1.jpg'
+      },
+      {
+          small: 'assets/images/juice2.jpg',
+          medium: 'assets/images/juice2.jpg',
+          big: 'assets/images/juice2.jpg'
+      },
+      {
+        small: 'assets/images/juice3.jpeg',
+        medium: 'assets/images/juice3.jpeg',
+        big: 'assets/images/juice3.jpeg'
+      },
+        
+    ];
+  }
 
   closeDialog() {
     this.Dialog.closeAll();

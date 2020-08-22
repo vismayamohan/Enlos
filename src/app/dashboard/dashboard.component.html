@@ -4,7 +4,8 @@
     <!-- MOBILE HEADER -->
     <div *ngIf= "isOpen" class="menu-mobile">
         <div class="menu-header">
-            <a href="javascript:void(0)" class="logo-brand"><img src="../../assets/images/enlos-solutions.png" alt="Logo"></a>
+            <!-- <a href="javascript:void(0)" class="logo-brand"><img src="../../assets/images/enlos-solutions.png" alt="Logo"></a> -->
+            <a href="javascript:void" class="logo-details"><span>Enlos Solutions</span></a>
             <a href="javascript:void(0)" class="menu-close"(click)="isOpenMenu()"><span class="icon-close"></span></a>
         </div>
         <div class="menu-body">
@@ -15,7 +16,7 @@
                             <mat-form-field appearance="fill">
                                 <mat-label></mat-label>
                                 <select matNativeControl>
-                                    <option value="volvo">Test Test</option>
+                                    <option value="volvo">Profile</option>
                                     <option value="saab">Logout</option>
                                 </select>
                             </mat-form-field>
@@ -30,7 +31,8 @@
     <header>
         <div class="main-header">
             <nav class="navbar navbar-expand-lg">
-                <a href="javascript:void(0)" class="logo-brand navbar-brand"><img src="../../assets/images/enlos-solutions.png" alt="LOGO"></a>
+                <!-- <a href="javascript:void(0)" class="logo-brand navbar-brand"><img src="../../assets/images/enlos-solutions.png" alt="LOGO"></a> -->
+                <a href="javascript:void(0)" class="logo-details"><span>Enlos Solutions</span></a>
                 <button class="navbar-toggler" type="button" (click)="isOpenMenu()">
                     <span class="icon-list"></span>
                 </button>
@@ -46,7 +48,7 @@
                     <mat-form-field appearance="fill">
                         <mat-label></mat-label>
                         <select matNativeControl>
-                            <option value="volvo">Test Test</option>
+                            <option value="volvo">Profile</option>
                             <option value="saab">Logout</option>
                         </select>
                     </mat-form-field>
@@ -184,7 +186,180 @@
     <div class="inner-content">
         <div class="inner-header">
             <div class="active-article">
-                <a href="javascript:void(0)" (click)="openDialog()"><span class="icon-list"></span>Active Articles</a>
+                <a href="javascript:void(0)">
+                    <button kendoButton *ngIf="!opened" (click)="openClose(true)"><span class="icon-list"></span>Active Articles</button>
+                </a>
+        <!-- <p>The state of the Window is <b>{{windowState}}</b></p> -->
+      <kendo-window title="Electronics citrus juicer orange juicer press machine Lemon fruit extrator" [(state)]="windowState" *ngIf="opened" (close)="openClose(false)">
+        <!-- <div class="row m-0">
+            <div class="col-md-12">
+                <div class="popuphead">
+                    <div class="popup-header">
+                        <div class="pop_head">
+                            <p><span class="icon-search"></span></p>
+                        </div>
+                        <div class="inter-bttn">
+                            <a href="javascript:void(0)"><span class="icon-minus"></span></a>
+                            <a href="javascript:void(0)"><span class="icon-rectangular"></span></a>
+                            <a href="javascript:void(0)" (click)="closeDialog()"><span class="icon-close"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="popup-body">
+            <mat-tab-group mat-align-tabs="start">
+                <mat-tab label="OVERVIEW">
+                    <div class="popup_innerbody">  
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="card_head"><span class="icon-photo"></span>PHOTOS </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                               <div class="card">
+                                   <div class="card-header">
+                                       <div class="inner_content">
+                                            <div class="card_head"><span class="icon-info"></span>INFO</div>
+                                            <div class="card-icons">
+                                                <a href="javascript:void(0)"><span class="icon-delete"></span></a>
+                                                <a href="javascript:void(0)"><span class="icon-add"></span></a>
+                                                <a href="javascript:void(0)"><span class="icon-pen"></span></a>
+                                                <a href="javascript:void(0)"><span class="icon-upload"></span></a>
+                                            </div>
+                                       </div>
+                                   </div>
+                                   <div class="card-body">
+                                       <div class="row">
+                                           <div class="col-md-6">
+                                                <div class="details">
+                                                   <h6>Title</h6>
+                                                   <span>Electronics citrus juicer orange juicer press machine Lemon fruit extrator</span>
+                                                   <hr>
+                                                </div>
+                                                <div class="details">
+                                                    <h6>Subtitle</h6>
+                                                    <span>-</span>
+                                                    <hr>
+                                                </div>
+                                                <div class="details">
+                                                    <h6>Current Sales Price</h6>
+                                                    <span>$ 999.00</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="details-main">
+                                                    <div class="details">
+                                                        <h6>Status</h6>
+                                                        <span>active</span>
+                                                    </div>
+                                                    <div class="details">
+                                                        <h6>Remaining Time</h6>
+                                                        <span>a month</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                       </div>
+                                   </div>
+                               </div> 
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="card_head"><span class="icon-list"></span> CATEGORY AND FORMAT</div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="details">
+                                                    <h6>Sales Format</h6>
+                                                    <span>FixedPriceItem</span>
+                                                    <hr>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="details">
+                                                    <h6>First Category</h6>
+                                                    <span>Juicers</span>
+                                                    <hr>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="details">
+                                                    <h6>First Shop Category</h6>
+                                                    <span>-</span>
+                                                    <hr>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="details">
+                                                    <h6>Duration</h6>
+                                                    <span>GTC</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="details">
+                                                    <h6>Second Category</h6>
+                                                    <span>-</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="details">
+                                                    <h6>Second Shop Category</h6>
+                                                    <span>-</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </mat-tab>
+                <mat-tab label="DESCRIPTION">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur praesentium beatae atque vero culpa, at 
+                    expedita, eum odit, dolor ad quae. Cum commodi non quas, provident, consequuntur deleniti possimus suscipit, 
+                    nulla est porro labore. Nemo, ipsum! Illo nisi, suscipit vero facere sequi odio praesentium ullam consequatur. 
+                    Delectus, fuga? Voluptas quod nesciunt, hic ducimus quia aliquid excepturi neque, laborum eligendi odio est 
+                    molestiae? Molestias praesentium quas inventore rem tempora eum quo tempore, amet, natus nisi fugit vel neque 
+                    error voluptates dolor assumenda harum doloremque. Aliquid fugit blanditiis magni deleniti, distinctio dolorum 
+                    alias ipsum ratione at rerum eius! Quaerat nobis doloremque explicabo accusantium est, non eius odit doloribus 
+                    voluptates corporis vel! Repellat esse officia consequatur odit illo corporis quod voluptatem ea ipsa nemo id 
+                    non ullam, eos, unde quos earum. Animi earum nostrum deserunt officiis! Pariatur illo voluptatum, commodi sequi, 
+                    voluptate esse est deserunt minus nihil totam aliquam mollitia earum accusamus dolor, optio veniam excepturi 
+                    consequuntur. Ullam delectus accusamus dignissimos asperiores laborum totam dolor nemo ut porro provident 
+                    quibusdam impedit, rerum incidunt tenetur quae distinctio suscipit animi ducimus? Dolor quae beatae a earum, 
+                    perferendis cumque veniam assumenda. Voluptates ipsam fugiat non possimus, quae asperiores, iste ipsa tempore 
+                    quia ducimus, dicta vel in nostrum maiores omnis magnam eveniet vitae fugit? Hic dolores fugiat eligendi 
+                    officiis id, deserunt neque nesciunt nemo rerum veniam odio ratione, nobis quidem, eaque eveniet sed! 
+                    Saepe ipsa animi pariatur, ex nostrum assumenda nisi voluptatum hic? Quibusdam ducimus nisi saepe obcaecati 
+                    consequuntur ea dolore culpa quasi voluptatem quisquam nam odio expedita dolorem nihil corrupti omnis dolorum 
+                    harum id pariatur fugiat, natus laborum, ipsam cum officia? Doloribus cupiditate repellat sapiente atque 
+                    explicabo quidem dolorem fugit veritatis quibusdam optio ea et quia consequuntur voluptatum placeat, ut 
+                    quis maxime tenetur magni autem recusandae, soluta doloremque? Dolore iste cum velit aut eligendi, nesciunt 
+                    illo fugiat. Voluptates assumenda, soluta aspernatur numquam et corrupti. Delectus obcaecati eligendi aut optio 
+                    doloremque. Omnis ipsum iusto temporibus, reprehenderit cum id sit, nam dolores officia illum aliquam eius, iste 
+                    alias eaque officiis praesentium. Ab doloremque totam at dolor aspernatur cum nostrum nobis obcaecati consequatur 
+                    maxime, dolorum perferendis laboriosam quos harum reiciendis saepe reprehenderit! Reiciendis nostrum magni 
+                    molestiae animi tenetur veritatis culpa, dolorum corporis cumque doloremque nulla iure sunt, accusantium illum 
+                    quis obcaecati veniam laboriosam adipisci repudiandae recusandae! Molestias earum veritatis error maiores tempore, 
+                    eligendi eveniet mollitia ut! Iusto voluptatum error est aut velit fuga modi! Quibusdam, id. Explicabo delectus 
+                    optio laboriosam voluptatibus dolores qui eligendi consequatur, ratione, molestiae est eum. Illum mollitia 
+                    architecto ipsam repudiandae laborum commodi quod doloribus tempore quidem nesciunt corporis, totam molestiae 
+                    aliquid dolore voluptatum, libero eaque nobis similique pariatur! Eius iste omnis maxime consequuntur? Assumenda 
+                    qui corporis consequatur commodi id fugiat blanditiis quis ab consequuntur? Blanditiis provident alias odio eveniet 
+                </mat-tab>
+              </mat-tab-group>
+        </div>
+      </kendo-window>
             </div>
             <div class="article-filter">
                 <a href="javascript:void(0)"><span class="icon-rectangular"></span></a>

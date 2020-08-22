@@ -11,6 +11,8 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PopupComponent } from './dashboard/popup/popup.component';
 import { NgxGalleryModule } from 'ngx-gallery-9';
+import { ButtonsModule } from '@progress/kendo-angular-buttons';
+import { DialogsModule } from '@progress/kendo-angular-dialog';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { NgxGalleryModule } from 'ngx-gallery-9';
     AppMaterial,
     FormsModule,
     ReactiveFormsModule,
-    NgxGalleryModule
+    NgxGalleryModule,
+    DialogsModule,
+    ButtonsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
