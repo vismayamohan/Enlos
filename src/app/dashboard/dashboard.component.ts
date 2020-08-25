@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
-import { PopupComponent } from './popup/popup.component';
 
 import { NgxGalleryOptions, NgxGalleryImage, NgxGalleryAnimation } from 'ngx-gallery-9';
 import { WindowState } from '@progress/kendo-angular-dialog';
@@ -22,12 +21,11 @@ export class DashboardComponent implements OnInit {
   itemsAdd: string = 'contentBottom';
   ordersAdd: string = 'contentBottom';
   newsAdded: string = 'contentBottom';
+  isUser: boolean = false;
 
-  // status: boolean = false;
   constructor(
     private Dialog: MatDialog
   ) { }
-
 
   isOpenMenu() {
     this.isOpen = !this.isOpen;
@@ -37,7 +35,9 @@ export class DashboardComponent implements OnInit {
     this.isDashboardMenu = !this.isDashboardMenu;
   }
 
-
+  userDetail() {
+    this.isUser = !this.isUser;
+  }
   selectOpenDiv(option) {
     if(option=="dashboard") {
       this.isDroupout = !this.isDroupout;
@@ -72,15 +72,6 @@ export class DashboardComponent implements OnInit {
       }
     }
   }
-
-  // openDialog() {
-  //   const dialogConfig = new MatDialogConfig()
-  //   this.Dialog.open(PopupComponent, {
-  //     width: '1000px',
-  //     height: '600px',
-  //     disableClose: true
-  //   });
-  // }
 
   public windowState: WindowState = 'default';
     public opened: boolean = false;

@@ -9,10 +9,11 @@ import { AppComponent } from './app.component';
 import { AppMaterial } from './app.material.module';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { PopupComponent } from './dashboard/popup/popup.component';
+// import { PopupComponent } from './dashboard/popup/popup.component';
 import { NgxGalleryModule } from 'ngx-gallery-9';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { DialogsModule } from '@progress/kendo-angular-dialog';
+import { DashboardTwoComponent } from './dashboard-two/dashboard-two.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { DialogsModule } from '@progress/kendo-angular-dialog';
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    PopupComponent,
+    DashboardTwoComponent,
+    // PopupComponent,
   ],
   imports: [
     CommonModule,
