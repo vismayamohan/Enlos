@@ -26,7 +26,6 @@
     "@progress/kendo-angular-common": "^1.2.3",
     "@progress/kendo-angular-dialog": "^4.2.1",
     "@progress/kendo-angular-l10n": "^2.0.2",
-    "@progress/kendo-angular-popup": "^3.0.6",
     "@syncfusion/ej2-base": "^18.2.54",
     "angular-super-gallery": "^2.1.8",
     "bootstrap": "^4.5.2",

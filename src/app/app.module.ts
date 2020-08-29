@@ -11,9 +11,10 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 // import { PopupComponent } from './dashboard/popup/popup.component';
 import { NgxGalleryModule } from 'ngx-gallery-9';
-import { ButtonsModule } from '@progress/kendo-angular-buttons';
-import { DialogsModule } from '@progress/kendo-angular-dialog';
+// import { ButtonsModule } from '@progress/kendo-angular-buttons';
+// import { DialogsModule } from '@progress/kendo-angular-dialog';
 import { DashboardTwoComponent } from './dashboard-two/dashboard-two.component';
+import { PopupComponent } from './dashboard/popup/popup.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { DashboardTwoComponent } from './dashboard-two/dashboard-two.component';
     LoginComponent,
     DashboardComponent,
     DashboardTwoComponent,
+    PopupComponent,
     // PopupComponent,
   ],
   imports: [
@@ -33,8 +35,8 @@ import { DashboardTwoComponent } from './dashboard-two/dashboard-two.component';
     FormsModule,
     ReactiveFormsModule,
     NgxGalleryModule,
-    DialogsModule,
-    ButtonsModule
+    // DialogsModule,
+    // ButtonsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

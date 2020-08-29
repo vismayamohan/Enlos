@@ -210,16 +210,16 @@ header .navbar {
 .active-article {
   font-size: 15px;
 }
-// .active-article a {
-//   color: grey;
-//   text-transform: uppercase;
-// }
+.active-article a {
+  color: grey;
+  text-transform: uppercase;
+}
 .active-article span {
   margin-right: 10px;
 }
-// .active-article a:hover {
-//   text-decoration: none;
-// }
+.active-article a:hover {
+  text-decoration: none;
+}
 .article-filter a {
   font-size: 15px;
   color: grey;
@@ -347,6 +347,9 @@ header .navbar {
 }
 .inter-bttn a {
   color: #fff;
+}
+.inter-bttn a:hover {
+  text-decoration: none;
 }
 .popup_innerbody {
   padding: 15px;
