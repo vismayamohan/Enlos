@@ -140,8 +140,8 @@ export class DashboardComponent implements OnInit {
 
   openDialog() {
     const dialogRef = this.Dialog.open(PopupComponent, {
-      width: '1000px',
-      height: '600px'
+      width: '80%',
+      height: '80%'
     })
   }
   closeDialog() {
