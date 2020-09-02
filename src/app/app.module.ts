@@ -15,6 +15,7 @@ import { NgxGalleryModule } from 'ngx-gallery-9';
 // import { DialogsModule } from '@progress/kendo-angular-dialog';
 import { DashboardTwoComponent } from './dashboard-two/dashboard-two.component';
 import { PopupComponent } from './dashboard/popup/popup.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { PopupComponent } from './dashboard/popup/popup.component';
     DashboardComponent,
     DashboardTwoComponent,
     PopupComponent,
+    ForgotPasswordComponent,
     // PopupComponent,
   ],
   imports: [
